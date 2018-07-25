@@ -39,6 +39,6 @@ class Home extends CI_Controller {
 	public function logoutUser()
 	{
 		unset($_SESSION['UserData']);
-		header("Location: " . "https://" . $_SERVER['HTTP_HOST'] . $location);
+		header('Location: '.$_SERVER['REQUEST_URI']);
 	}
 }
