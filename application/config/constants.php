@@ -26,5 +26,7 @@ defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest auto
 
 define('HOSTNAME_MONGO','ds149743.mlab.com');
 define('PORT_MONGO','49743');
+// define('HOSTNAME_MONGO','2.2.2.2');
+// define('PORT_MONGO','27017');
 define('USERNAME_MONGO','admin');
 define('PASSWORD_MONGO','Kenjishop07');
