@@ -3,15 +3,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Home extends CI_Controller {
 	function __construct() {
         parent::__construct();
-        $this->load->model('M_default');
+        $this->load->model('Mdefault');
         $this->loggedin=$this->general->checkLogged();
     }
 	public function index()
 	{
 		$data['loggedin']=$this->loggedin;
-		$data['promo']=$this->m_default->getPromo(['IsActive'=>true],[]);
-		$data['categories']=$this->m_default->getCategories([],['limit'=>4,'sort'=>['Createdtime'=>1]]);
-		$data['newarrival']=$this->m_default->getCategories([],['limit'=>4,'sort'=>['Createdtime'=>1]]);
+		$data['promo']=$this->Mdefault->getPromo(['IsActive'=>true],[]);
+		$data['categories']=$this->Mdefault->getCategories([],['limit'=>4,'sort'=>['Createdtime'=>1]]);
+		$data['newarrival']=$this->Mdefault->getCategories([],['limit'=>4,'sort'=>['Createdtime'=>1]]);
 		$this->load->view('home',$data);
 	}	
 	public function registrasiUser()

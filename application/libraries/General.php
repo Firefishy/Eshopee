@@ -5,7 +5,7 @@ class General {
     public function __construct()
     {
         $this->CI =& get_instance();
-        $this->CI->load->model('M_default');
+        $this->CI->load->model('Mdefault');
     }
     function checkLogged()
     {
@@ -16,7 +16,7 @@ class General {
     }
     function loginUser($uname,$upass)
     {
-        $result = $this->CI->m_default->getUser(['$or'=>[['Username'=>$uname],['Email'=>$uname]],'Password'=>md5($upass)]);
+        $result = $this->CI->Mdefault->getUser(['$or'=>[['Username'=>$uname],['Email'=>$uname]],'Password'=>md5($upass)]);
         if(count($result)>0)
         {
             $this->CI->session->set_userdata('UserData', json_encode($result));
@@ -27,12 +27,12 @@ class General {
     {
         if($type=='checkexist')
         {
-            $result = $this->CI->m_default->getUser(['$or'=>[['Username'=>$uname],['Email'=>$uname]],'Password'=>md5($upass)]);
+            $result = $this->CI->Mdefault->getUser(['$or'=>[['Username'=>$uname],['Email'=>$uname]],'Password'=>md5($upass)]);
             return json_encode($result);//die();
         }
         else if($type=='insertuser')
         {
-            $result=$this->CI->m_default->insertUser(['Username'=>$uname,'Password'=>md5($upass),'Email'=>$uemail,'Role'=>'','CompanyId'=>'']);
+            $result=$this->CI->Mdefault->insertUser(['Username'=>$uname,'Password'=>md5($upass),'Email'=>$uemail,'Role'=>'','CompanyId'=>'']);
             return $result->getInsertedId();
             //$this->CI->Email->confirmEmail($uname,$result->insertedId());
         }
