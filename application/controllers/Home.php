@@ -39,6 +39,6 @@ class Home extends CI_Controller {
 	public function logoutUser()
 	{
 		unset($_SESSION['UserData']);
-		redirect('Home/index');
+		redirect(base_url());
 	}
 }
