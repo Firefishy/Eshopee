@@ -5,7 +5,7 @@ class Home extends CI_Controller {
         parent::__construct();
         $this->load->model('Mdefault');
         $this->loggedin=$this->general->checkLogged();
-        echo base_url().'lll';
+        echo base_url().'lllz';
     }
 	public function index()
 	{
