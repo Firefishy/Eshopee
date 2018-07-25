@@ -7,7 +7,6 @@ class General {
         $this->CI =& get_instance();
         $this->CI->load->model('Mdefault');
         header('Access-Control-Allow-Origin: *');
-        echo base_url().'lll';
     }
     function checkLogged()
     {
