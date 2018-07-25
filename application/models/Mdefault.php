@@ -4,6 +4,7 @@ class Mdefault extends CI_Model {
     function __construct() {
         parent::__construct();
         $connection = new MongoDB\Client("mongodb://".USERNAME_MONGO.":".PASSWORD_MONGO."@".HOSTNAME_MONGO.":".PORT_MONGO);
+        print_r($connection);
         //$connection = new MongoDB\Client("mongodb://".HOSTNAME_MONGO.":".PORT_MONGO);
         $this->kenjishop = $connection->kenjishop;
     }
