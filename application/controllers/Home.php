@@ -39,6 +39,6 @@ class Home extends CI_Controller {
 	public function logoutUser()
 	{
 		unset($_SESSION['UserData']);
-		echo("<meta http-equiv='refresh' content='1'>");
+		redirect('Home/index');
 	}
 }
