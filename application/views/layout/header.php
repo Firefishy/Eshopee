@@ -164,7 +164,7 @@
 					else{toastr.warning('Login failed, please try again');}
 				},
 				error:function(error) {
-					toastr.error(error);
+					console.log(error);
 				}
 			});
 		});
