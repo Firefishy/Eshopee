@@ -24,7 +24,7 @@ defined('EXIT_DATABASE')       OR define('EXIT_DATABASE', 8); // database error
 defined('EXIT__AUTO_MIN')      OR define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
 defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
 
-define('HOSTNAME_MONGO','2.2.2.2');
-define('PORT_MONGO','27017');
-define('USERNAME_MONGO',NULL);
-define('PASSWORD_MONGO',NULL);
+define('HOSTNAME_MONGO','ds149743.mlab.com');
+define('PORT_MONGO','49743');
+define('USERNAME_MONGO','admin');
+define('PASSWORD_MONGO','Kenjishop07');
