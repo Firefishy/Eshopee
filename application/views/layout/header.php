@@ -155,7 +155,7 @@
 			if(e.target.username.value==''||e.target.password.value==''){toastr.warning('Please fill username and password','Warning');}
 			e.preventDefault();
 			$.ajax({              
-				url: "/Home/loginUser",
+				url: "/Home/loginUser/",
 				dataType: "json",
 				type:"POST",
 				data:{'login':true,'user':e.target.username.value,'pass':e.target.password.value},
@@ -175,7 +175,7 @@
 			else
 			{
 				$.ajax({              
-					url: "<?php echo base_url() ?>Home/registrasiUser",
+					url: "Home/registrasiUser/",
 					dataType: "json",
 					type:"POST",
 					data:{'login':true,'user':e.target.username.value,'email':e.target.email.value,'pass':e.target.password.value},
