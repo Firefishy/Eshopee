@@ -152,7 +152,7 @@
 <script>
 	$(document).ready(function(){
 		$(".formModalLogin").submit(function(e){
-			if(e.target.username.value==''||e.target.password.value==''){toastr.warning('Please fill username and password','Warning');}
+			if(e.target.username.value==''||e.target.password.value==''){$.jGrowl("Please fill username and password");toastr.warning('Please fill username and password','Warning');}
 			e.preventDefault();
 			$.ajax({              
 				url: "/Home/loginUser/",

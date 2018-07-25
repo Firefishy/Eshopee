@@ -9,6 +9,8 @@
 <link href="assets/css/jquery-ui.theme.min.css" rel="stylesheet">
 <link href="assets/css/toastr.min.css" rel="stylesheet"/>
 <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="assets/css/jquery.jgrowl.min.css" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
 <meta name="keywords" content="E-Commerce" />
 <script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.jgrowl.min.js"></script>
