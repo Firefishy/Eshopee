@@ -6,7 +6,7 @@ class General {
     {
         $this->CI =& get_instance();
         $this->CI->load->model('Mdefault');
-        header('Access-Control-Allow-Origin: *');
+        // header('Access-Control-Allow-Origin: *');
     }
     function checkLogged()
     {
@@ -29,7 +29,8 @@ class General {
         if($type=='checkexist')
         {
             $result = $this->CI->Mdefault->getUser(['$or'=>[['Username'=>$uname],['Email'=>$uname]],'Password'=>md5($upass)]);
-            return json_encode($result);//die();
+            echo json_encode($result);//die();
+            return json_encode($result);
         }
         else if($type=='insertuser')
         {

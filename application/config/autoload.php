@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 $autoload['packages'] = array();
-$autoload['libraries'] = array('session','encryption','General','email');
+$autoload['libraries'] = array('session','encryption','General');
 $autoload['drivers'] = array();
 $autoload['helper'] = array('url','file','form','cookie');
 $autoload['config'] = array();
