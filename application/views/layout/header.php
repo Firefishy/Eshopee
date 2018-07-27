@@ -175,7 +175,7 @@
 			else
 			{
 				$.ajax({              
-					url: "<?= base_url() ?>Home/registrasiUserz/",
+					url: "<?= base_url() ?>Home/registrasiUser/",
 					dataType: "json",
 					type:"POST",
 					data:{'login':true,'user':e.target.username.value,'email':e.target.email.value,'pass':e.target.password.value},
