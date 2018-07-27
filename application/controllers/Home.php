@@ -8,8 +8,6 @@ class Home extends CI_Controller {
     }
 	public function index()
 	{
-		echo base_url();
-		// echo "\n".$_SERVER['HTTP'];
 		$data['loggedin']=$this->loggedin;
 		$data['promo']=$this->Mdefault->getPromo(['IsActive'=>true],[]);
 		$data['categories']=$this->Mdefault->getCategories([],['limit'=>4,'sort'=>['Createdtime'=>1]]);
