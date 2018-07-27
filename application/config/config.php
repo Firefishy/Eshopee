@@ -2,9 +2,9 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 
-$config['base_url'] ='https://eshopee.herokuapp.com/';
+//$config['base_url'] ='https://eshopee.herokuapp.com/';
 //$config['base_url'] = ($_SERVER['SERVER_PORT'] == 443 ? 'https' : 'http') . "://{$_SERVER['HTTP_HOST']}/";
-$config['base_url'] = (isset($_SERVER['HTTPS']) ? "https://" : "http://").$_SERVER['HTTP_HOST'];
+$config['base_url'] = (is_https()  ? "https://" : "http://").$_SERVER['HTTP_HOST'];
 
 $config['index_page'] = '';
 $config['uri_protocol']	= 'AUTO';
