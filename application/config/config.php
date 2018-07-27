@@ -4,8 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 //$config['base_url'] = (isset($_SERVER['HTTPS']) ? "https://" : "http://").$_SERVER['HTTP_HOST'];//'https://eshopee.herokuapp.com/';
 
-$protocol = (!empty($_SERVER['HTTPS'])) ? 'https' : 'http';
-$base_url = $protocol . '://mysite.com';
+$config['base_url'] = (isset($_SERVER['HTTPS']) ? "https://" : "http://").$_SERVER['HTTP_HOST'];
 
 $config['index_page'] = '';
 $config['uri_protocol']	= 'AUTO';
