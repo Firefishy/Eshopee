@@ -22,7 +22,7 @@ class Home extends CI_Controller {
 			$_idUser=$this->general->registerUser($_POST['user'],$_POST['email'],$_POST['pass'],'insertuser');
 
 	        $config = Array(  
-			'protocol' => 'smtp',  
+			'protocol' => 'email',  
 			'smtp_host' => 'ssl://smtp.googlemail.com',  
 			'smtp_port' => 465,  
 			'smtp_user' => 'kenjibanzai@gmail.com',   
