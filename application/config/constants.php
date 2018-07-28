@@ -24,11 +24,20 @@ defined('EXIT_DATABASE')       OR define('EXIT_DATABASE', 8); // database error
 defined('EXIT__AUTO_MIN')      OR define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
 defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
 
-define('HOSTNAME_MONGO','ds149743.mlab.com');
-define('PORT_MONGO','49743');
-// define('HOSTNAME_MONGO','2.2.2.2');
-// define('PORT_MONGO','27017');
-define('USERNAME_MONGO','admin');
-define('PASSWORD_MONGO','Kenjishop07');
+// define('HOSTNAME_MONGO','ds149743.mlab.com');
+// define('PORT_MONGO','49743');
+// define('USERNAME_MONGO','admin');
+// define('PASSWORD_MONGO','Kenjishop07');
+
+define('HOSTNAME_MONGO','2.2.2.2');
+define('PORT_MONGO','27017');
+
 define('EMAILSENDGRID',"app103082612@heroku.com");
 define('APISENDGRID',"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");
+
+
+define('DBConnectionOnline',"mongodb://admin:Kenjishop07@ds149743.mlab.com:49743/kenjishop");
+define('DBConnectionLocal',"mongodb://2.2.2.2:27017");
+define('DBConnection',DBConnectionOnline);
+//$connection = new MongoDB\Client("mongodb://".USERNAME_MONGO.":".PASSWORD_MONGO."@".HOSTNAME_MONGO.":".PORT_MONGO."/kenjishop");
+        //$connection = new MongoDB\Client("mongodb://".HOSTNAME_MONGO.":".PORT_MONGO);

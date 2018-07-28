@@ -11,7 +11,6 @@ class Home extends CI_Controller {
 		$data['loggedin']=$this->loggedin;
 		$data['promo']=$this->Mdefault->getPromo(['IsActive'=>true],[]);
 		$data['categories']=$this->Mdefault->getCategories([],['limit'=>4,'sort'=>['Createdtime'=>1]]);
-		$data['newarrival']=$this->Mdefault->getCategories([],['limit'=>4,'sort'=>['Createdtime'=>1]]);
 		$this->load->view('home',$data);
 	}	
 	public function registrasiUser()
