@@ -29,7 +29,7 @@ class Home extends CI_Controller {
 			$content = new SendGrid\Content("text/html", 'You have already registered, but you must confirm this email for log in to your account. <a href="'.base_url().'?ConfirmEmail=5b46b6f06b77ddc124672887">Confirm your account</a>');
 			$mail = new SendGrid\Mail($from, $subject, $to, $content);
 
-			$apiKey = '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';
+			$apiKey = SENDGRID_API_KEY;
 			$sg = new \SendGrid($apiKey);
 			$response = $sg->client->mail()->send()->post($mail);
 		}

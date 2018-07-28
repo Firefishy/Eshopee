@@ -33,8 +33,6 @@ define('HOSTNAME_MONGO','2.2.2.2');
 define('PORT_MONGO','27017');
 
 define('EMAILSENDGRID',"app103082612@heroku.com");
-define('APISENDGRID',"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");
-
 
 define('DBConnectionOnline',"mongodb://admin:Kenjishop07@ds149743.mlab.com:49743/kenjishop");
 define('DBConnectionLocal',"mongodb://2.2.2.2:27017");
