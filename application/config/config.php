@@ -2,8 +2,9 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 
-$config['base_url'] = (is_https()  ? "https://" : "http://").$_SERVER['HTTP_HOST'];
-
+// $config['base_url'] = (is_https()  ? "https://" : "http://").$_SERVER['HTTP_HOST'];
+$config['base_url'] = "http://".$_SERVER['HTTP_HOST'];
+$config['base_url'] .= preg_replace('@/+$@','',dirname($_SERVER['SCRIPT_NAME'])).'/';
 $config['index_page'] = '';
 $config['uri_protocol']	= 'AUTO';
 $config['url_suffix'] = '';
@@ -11,7 +12,7 @@ $config['language']	= 'english';
 $config['charset'] = 'UTF-8';
 $config['enable_hooks'] = TRUE;
 $config['subclass_prefix'] = 'MY_';
-$config['composer_autoload'] = TRUE;
+$config['composer_autoload'] = 'vendor/autoload.php';
 $config['permitted_uri_chars'] = 'a-z 0-9~%.:_\-';
 $config['enable_query_strings'] = FALSE;
 $config['controller_trigger'] = 'c';

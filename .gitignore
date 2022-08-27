@@ -21,3 +21,4 @@ user_guide_src/
 *.sublime-project
 /tests/tests/
 /tests/results/
+.env
